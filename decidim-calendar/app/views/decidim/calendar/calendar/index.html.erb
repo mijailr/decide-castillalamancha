@@ -1,0 +1,14 @@
+<% add_decidim_meta_tags({
+  title: t('.title'),
+  description: t('.description'),
+  url: calendar_index_url
+}) %>
+<main class="wrapper">
+  <section id="calendar-container" class="row column">
+    <h1 class="section-heading"><%= t('.title') %></h1>
+    <div id="calendar"></div>
+  </section>
+</main>
+<%= javascript_include_tag "decidim/calendar/calendar" %>
+<%= stylesheet_link_tag "decidim/calendar/calendar" %>
+<%= render partial: "fullcalendar", locals: {meetings: @meetings} %>

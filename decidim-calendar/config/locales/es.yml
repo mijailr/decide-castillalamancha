@@ -1,0 +1,9 @@
+es:
+  decidim:
+    calendar:
+      calendar:
+        index:
+          title: 'Calendario'
+          description: 'Calendario global de eventos en procesos participativos.'
+    menu:
+      calendar: "Calendario"
