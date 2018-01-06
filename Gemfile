@@ -5,7 +5,8 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 
 gem "decidim", "0.8.2"
-
+gem "decidim-admin", path: "decidim-admin"
+gem "decidim-core", path: "decidim-core"
 # Uncomment the following line if you want to use decidim-assemblies plugin
 # gem "decidim-assemblies", "0.9.0.pre"
 
