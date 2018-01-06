@@ -14,6 +14,9 @@ module Decidim
       attribute :remove_homepage_image
       attribute :logo
       attribute :remove_logo
+      attribute :banner
+      attribute :remove_banner
+      attribute :banner_link
       attribute :favicon
       attribute :remove_favicon
       attribute :official_img_header
@@ -24,6 +27,7 @@ module Decidim
       attribute :show_statistics, Boolean
       attribute :header_snippets, String
       attribute :cta_button_path, String
+
 
       translatable_attribute :cta_button_text, String
       translatable_attribute :description, String
