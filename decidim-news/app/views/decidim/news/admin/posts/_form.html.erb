@@ -1,0 +1,11 @@
+<div class="row column">
+  <%= form.translated :text_field, :title, autofocus: true %>
+</div>
+
+<div class="row column">
+  <%= form.text_field :slug %>
+</div>
+
+<div class="row column">
+  <%= form.translated :editor, :content, toolbar: :full, lines: 25 %>
+</div>
