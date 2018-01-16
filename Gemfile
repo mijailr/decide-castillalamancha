@@ -15,7 +15,7 @@ gem "decidim-debates", path: "decidim-debates"
 
 gem "puma", "~> 3.0"
 gem "uglifier", ">= 1.3.0"
-
+gem "therubyracer"
 gem "faker", "~> 1.8.4"
 
 group :development, :test do
