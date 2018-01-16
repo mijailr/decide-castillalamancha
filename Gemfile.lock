@@ -12,6 +12,12 @@ PATH
       select2-rails (~> 4.0.3)
 
 PATH
+  remote: decidim-calendar
+  specs:
+    decidim-calendar (0.8.2)
+      decidim-core (= 0.8.2)
+
+PATH
   remote: decidim-core
   specs:
     decidim-core (0.8.2)
@@ -634,6 +640,7 @@ DEPENDENCIES
   capistrano3-delayed-job (~> 1.0)
   decidim (= 0.8.2)
   decidim-admin!
+  decidim-calendar!
   decidim-core!
   decidim-debates!
   decidim-dev (= 0.8.2)
