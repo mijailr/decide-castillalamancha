@@ -3,5 +3,5 @@
 server "decideclm.alabs.org", roles: %w(app db web worker)
 set :branch, "master"
 set :rails_env, "staging"
-set :repo_url, "https://github.com/alabs/decideclm" # Until we have access to GitHub repository 
+set :repo_url, "https://github.com/alabs/decide-castillalamancha" # Until we have access to GitHub repository 
 
