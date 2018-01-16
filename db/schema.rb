@@ -393,6 +393,8 @@ ActiveRecord::Schema.define(version: 20180110162409) do
     t.text "header_snippets"
     t.jsonb "cta_button_text"
     t.string "cta_button_path"
+    t.string "banner"
+    t.string "banner_link"
     t.index ["host"], name: "index_decidim_organizations_on_host", unique: true
     t.index ["name"], name: "index_decidim_organizations_on_name", unique: true
   end
