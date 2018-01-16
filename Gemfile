@@ -5,7 +5,7 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 
 gem "decidim", "0.8.2"
-gem "decidim-core", path: "decidim-core"
+# gem "decidim-core", path: "decidim-core"
 gem "decidim-news", path: "decidim-news"
 
 # Uncomment the following line if you want to use decidim-assemblies plugin
