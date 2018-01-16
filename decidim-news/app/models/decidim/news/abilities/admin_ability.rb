@@ -7,10 +7,7 @@ module Decidim
       class AdminAbility < Decidim::Abilities::AdminAbility
         def define_abilities
           super
-
-          can :read, Post
-          can :update, Post
-          can :destroy, Post
+          can :manage, Post
         end
       end
     end

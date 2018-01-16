@@ -5,17 +5,17 @@ module Decidim
     class Admin::PostsController < Decidim::Admin::ApplicationController
       skip_authorization_check
       def index
-        # authorize! :index, Post
+        authorize! :index, Post
         @posts = collection
       end
 
       def new
-        # authorize! :new, Post
+        authorize! :new, Post
         @form = form(PostForm).instance
       end
 
       def create
-        # authorize! :new, StaticPage
+        authorize! :new, Post
         @form = form(PostForm).from_params(form_params)
 
         CreatePost.call(@form) do
@@ -27,6 +27,29 @@ module Decidim
           on(:invalid) do
             flash.now[:alert] = I18n.t("create.error", scope: "decidim.news")
             render :new
+          end
+        end
+      end
+
+      def edit
+        authorize! :update, post
+        @form = form(PostForm).from_model(post)
+      end
+
+      def update
+        @post = collection.find(params[:id])
+        authorize! :update, post
+        @form = form(PostForm).from_params(form_params)
+
+        UpdatePost.call(post, @form) do
+          on(:ok) do
+            flash[:notice] = I18n.t("posts.update.success", scope: "decidim.news")
+            redirect_to posts_path
+          end
+
+          on(:invalid) do
+            flash.now[:alert] = I18n.t("posts.update.error", scope: "decidim.news")
+            render :edit
           end
         end
       end
