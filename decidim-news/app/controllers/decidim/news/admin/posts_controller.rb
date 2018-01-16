@@ -3,10 +3,11 @@
 module Decidim
   module News
     class Admin::PostsController < Decidim::Admin::ApplicationController
-      skip_authorization_check
+
+      helper_method :posts, :post
       def index
         authorize! :index, Post
-        @posts = collection
+        @posts = collection.page(params[:page]).per(15)
       end
 
       def new
@@ -43,17 +44,24 @@ module Decidim
 
         UpdatePost.call(post, @form) do
           on(:ok) do
-            flash[:notice] = I18n.t("posts.update.success", scope: "decidim.news")
+            flash[:notice] = I18n.t("update.success", scope: "decidim.news")
             redirect_to posts_path
           end
 
           on(:invalid) do
-            flash.now[:alert] = I18n.t("posts.update.error", scope: "decidim.news")
+            flash.now[:alert] = I18n.t("update.error", scope: "decidim.news")
             render :edit
           end
         end
       end
+      def destroy
+        authorize! :destroy, post
+        post.destroy!
 
+        flash[:notice] = I18n.t("destroy.success", scope: "decidim.news")
+
+        redirect_to posts_path
+      end
       private
 
       def form_params

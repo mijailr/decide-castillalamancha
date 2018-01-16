@@ -5,9 +5,8 @@ require_dependency "decidim/news/application_controller"
 module Decidim
   module News
     class PostsController < Decidim::News::ApplicationController
-      skip_authorization_check
       helper_method :posts, :post
-
+      authorize_resource :public_pages, class: false
       def index
         @posts = posts
       end

@@ -6,7 +6,7 @@ module Decidim
   # their own participatory processes.
   class Organization < ApplicationRecord
     SOCIAL_HANDLERS = [:twitter, :facebook, :instagram, :youtube, :github].freeze
-
+    has_many :posts, foreign_key: "decidim_organization_id", class_name: "Decidim::News::Post", inverse_of: :organization,  dependent: :destroy
     has_many :static_pages, foreign_key: "decidim_organization_id", class_name: "Decidim::StaticPage", inverse_of: :organization, dependent: :destroy
     has_many :scopes, -> { order(name: :asc) }, foreign_key: "decidim_organization_id", class_name: "Decidim::Scope", inverse_of: :organization
     has_many :scope_types, -> { order(name: :asc) }, foreign_key: "decidim_organization_id", class_name: "Decidim::ScopeType", inverse_of: :organization
