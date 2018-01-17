@@ -16,7 +16,7 @@ module Decidim
 
       initializer "decidim_news.menu" do
         Decidim.menu :menu do |menu|
-          menu.item I18n.t("menu.news", scope: "decidim"),
+          menu.item I18n.t("posts.menu", scope: "decidim.news"),
                     decidim_news.posts_path,
                     icon_name: "news",
                     position: 5,
