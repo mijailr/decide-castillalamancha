@@ -21,14 +21,15 @@
 
 
         </div>
-        <div class="card__footer card__footer--transparent">
-          <ul class="card-data card-data--blog">
-            <li class="card-data__item card-data__item--blog"></li>
-            <li class="card-data__item card-data__item--blog">
-              <%= l post.created_at, format: "%d/%m/%Y" %>
-            </li>
-          </ul>
-          <!-- <%= render partial: "datetime", locals: { post: post } %> -->
+        <div class="card__footer">
+          <div class="card__support">
+            <div class="card__support__data">
+              <span><%= l post.created_at, format: "%d/%m/%Y" %></span>
+            </div>
+            <div class="">
+                <span><%= link_to t("read_more", scope: "decidim.news.posts"), post, class: "card__button button small" %></span>
+            </div>
+          </div>
         </div>
       </article>
     </div>

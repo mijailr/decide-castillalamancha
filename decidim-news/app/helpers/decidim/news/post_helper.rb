@@ -17,8 +17,7 @@ module Decidim
       def post_description(post, max_length = 180)
         link = post_path(post)
         body = strip_tags(translated_attribute(post.content))
-        tail = "... #{link_to(t("read_more", scope: "decidim.news.posts"), link)}".html_safe
-        CGI.unescapeHTML html_truncate(body, max_length: max_length, tail: tail)
+        CGI.unescapeHTML html_truncate(body, max_length: max_length)
       end
     end
   end
