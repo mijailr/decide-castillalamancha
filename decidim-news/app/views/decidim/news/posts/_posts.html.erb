@@ -11,7 +11,7 @@
               </h5>
             <% end %>
             <div class="card__author">
-
+              <%= render partial: "author", locals: {author: post.user} %>
             </div>
 
           </div>
