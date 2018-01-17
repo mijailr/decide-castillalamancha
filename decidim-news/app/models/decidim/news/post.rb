@@ -14,6 +14,7 @@ module Decidim
                   inverse_of: :posts
       validates :slug, presence: true, uniqueness: { scope: :organization }
       validates :slug, format: { with: /\A[a-z0-9-]+/ }
+      default_scope { order(created_at: :desc) }
 
       def to_param
         slug.parameterize

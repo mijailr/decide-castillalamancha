@@ -17,7 +17,7 @@ module Decidim
 
       initializer "decidim_news.admin_menu" do
         Decidim.menu :admin_menu do |menu|
-          menu.item I18n.t("menu.news", scope: "decidim.admin"),
+          menu.item I18n.t("admin.menu", scope: "decidim.news"),
                     Decidim::News::AdminEngine.routes.url_helpers.posts_path,
                     icon_name: "clipboard",
                     position: 5,

@@ -1,4 +1,35 @@
-es:
+en:
   decidim:
     menu:
       news: Noticias
+    admin:
+      menu:
+        news: Noticias
+    news:
+      admin:
+        create:
+          success: Post creado exitosamente
+          error: No se pudo crear el post
+        destroy:
+          success: Post eliminado exitosamente
+          error: No se pudo eliminar el post
+        new:
+          save: Crear post
+          title: Nuevo post
+        update:
+          success: Post actualizado correctamente
+          save: Guardar post
+          title: Edit post
+          error: No se pudo actualizar el post
+        view: Ver post
+        destroy: Eliminar post
+        fields:
+          title: Titulo
+          created_at: Creado el
+        index:
+          title: Posts
+          description: Noticias globales
+        menu: Noticias
+      posts:
+        read_more: Leer más
+        menu: Noticias
