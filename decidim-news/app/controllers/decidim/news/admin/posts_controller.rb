@@ -21,12 +21,12 @@ module Decidim
 
         CreatePost.call(@form) do
           on(:ok) do
-            flash[:notice] = I18n.t("create.success", scope: "decidim.news")
+            flash[:notice] = I18n.t("admin.create.success", scope: "decidim.news")
             redirect_to posts_path
           end
 
           on(:invalid) do
-            flash.now[:alert] = I18n.t("create.error", scope: "decidim.news")
+            flash.now[:alert] = I18n.t("admin.create.error", scope: "decidim.news")
             render :new
           end
         end

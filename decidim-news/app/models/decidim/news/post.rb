@@ -12,6 +12,9 @@ module Decidim
                   foreign_key: "decidim_organization_id",
                   class_name: "Decidim::Organization",
                   inverse_of: :posts
+      belongs_to :user,
+                  foreign_key: "decidim_user_id",
+                  class_name: "Decidim::User"
       validates :slug, presence: true, uniqueness: { scope: :organization }
       validates :slug, format: { with: /\A[a-z0-9-]+/ }
       default_scope { order(created_at: :desc) }
