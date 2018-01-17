@@ -1,0 +1,22 @@
+<% add_decidim_meta_tags({
+  description: translated_attribute(post.content),
+  title: translated_attribute(post.title),
+  url: post_url(post),
+  twitter_handler: current_organization.twitter_handler
+}) %>
+
+<main class="wrapper">
+  <div class="row">
+    <div class="section">
+      <div class="post-header">
+        <h2 class="heading2"><%= translated_attribute(post.title) %></h2>
+        <p>
+           <span><%= icon "calendar", role: "img" %> <%= l post.created_at, format: "%d/%m/%Y" %></span>
+        </p>
+      </div>
+
+      <%= decidim_sanitize translated_attribute(post.content) %>
+    </div>
+    <%= comments_for post %>
+  </div>
+</main>

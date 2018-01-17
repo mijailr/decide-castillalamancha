@@ -9,7 +9,7 @@ gem "decidim-calendar", path: "decidim-calendar"
 gem "decidim-admin", path: "decidim-admin"
 gem "decidim-core", path: "decidim-core"
 gem "decidim-debates", path: "decidim-debates"
-
+gem "decidim-news", path: "decidim-news"
 # Uncomment the following line if you want to use decidim-assemblies plugin
 # gem "decidim-assemblies", "0.9.0.pre"
 

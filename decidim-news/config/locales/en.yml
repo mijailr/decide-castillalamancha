@@ -1,0 +1,53 @@
+en:
+  decidim:
+    menu:
+      news: News
+    admin:
+      menu:
+        news: News
+      titles:
+        news: News
+      posts:
+        new:
+          title: Title
+        edit:
+          title: Title
+    news:
+      create:
+        success: Post created successfully
+        error: Error creating new post
+      destroy:
+        success: Post deleted successfully
+        error: Error deleting post
+      update:
+        success: Post update successfully
+        error: Error updating Post
+      new:
+        create: Create post
+      read_more: Read more
+      admin:
+        posts:
+          new:
+            title: New Post
+            create: Create
+          edit:
+            title: Edit Post
+            update: Update Post
+
+      titles:
+        news: News
+      posts:
+
+        actions:
+          view: View post
+          destroy: Destroy post
+        index:
+          title: Posts
+          description: Global news posts
+        create:
+          new: Create new post
+          error: Can't create new post
+          success: Post created
+        fields:
+          title: Title
+          created_at: Created at
