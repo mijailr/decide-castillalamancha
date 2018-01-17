@@ -15,7 +15,6 @@ module Decidim
       #
       # Returns the blog's body truncated.
       def post_description(post, max_length = 180)
-        link = post_path(post)
         body = strip_tags(translated_attribute(post.content))
         CGI.unescapeHTML html_truncate(body, max_length: max_length)
       end
