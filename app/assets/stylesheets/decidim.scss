@@ -21,3 +21,15 @@ $secondary: #777779;
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Arial Narrow', Arial, sans-serif;
 }
+
+.title-bar {
+  background: #fff;
+  color: #000;
+  .topbar__dropmenu > ul > li > a {
+    color: #4D4D4D;
+  }
+}
+
+.topbar__notifications .icon, .topbar__conversations .icon {
+  fill: #000;
+}
