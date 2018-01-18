@@ -19,7 +19,7 @@ module Decidim
           menu.item I18n.t("posts.menu", scope: "decidim.news"),
                     decidim_news.posts_path,
                     icon_name: "news",
-                    position: 5,
+                    position: 2,
                     active: :inclusive
         end
       end
