@@ -21,7 +21,8 @@ module Decidim
                     Decidim::News::AdminEngine.routes.url_helpers.posts_path,
                     icon_name: "clipboard",
                     position: 5,
-                    active: :inclusive
+                    active: :inclusive,
+                    if: can?(:manage, Decidim::News::Post)
         end
       end
 
