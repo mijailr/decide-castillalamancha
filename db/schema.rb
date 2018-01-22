@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180110162409) do
+ActiveRecord::Schema.define(version: 20180122171240) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -347,7 +347,9 @@ ActiveRecord::Schema.define(version: 20180110162409) do
     t.bigint "decidim_organization_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "decidim_user_id"
     t.index ["decidim_organization_id"], name: "index_decidim_news_posts_on_decidim_organization_id"
+    t.index ["decidim_user_id"], name: "index_decidim_news_posts_on_decidim_user_id"
   end
 
   create_table "decidim_newsletters", id: :serial, force: :cascade do |t|
@@ -696,6 +698,21 @@ ActiveRecord::Schema.define(version: 20180110162409) do
     t.index ["reset_password_token"], name: "index_decidim_users_on_reset_password_token", unique: true
   end
 
+  create_table "delayed_jobs", force: :cascade do |t|
+    t.integer "priority", default: 0, null: false
+    t.integer "attempts", default: 0, null: false
+    t.text "handler", null: false
+    t.text "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string "locked_by"
+    t.string "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["priority", "run_at"], name: "delayed_jobs_priority"
+  end
+
   create_table "versions", force: :cascade do |t|
     t.string "item_type", null: false
     t.integer "item_id", null: false
@@ -711,6 +728,7 @@ ActiveRecord::Schema.define(version: 20180110162409) do
   add_foreign_key "decidim_categorizations", "decidim_categories"
   add_foreign_key "decidim_identities", "decidim_organizations"
   add_foreign_key "decidim_news_posts", "decidim_organizations"
+  add_foreign_key "decidim_news_posts", "decidim_users"
   add_foreign_key "decidim_newsletters", "decidim_users", column: "author_id"
   add_foreign_key "decidim_participatory_process_steps", "decidim_participatory_processes"
   add_foreign_key "decidim_participatory_processes", "decidim_organizations"

@@ -18,6 +18,7 @@ gem "uglifier", ">= 1.3.0"
 gem "therubyracer"
 gem "faker", "~> 1.8.4"
 gem "airbrake", "~> 5.0"
+gem "delayed_job_active_record"
 
 group :development, :test do
   gem "byebug", platform: :mri
