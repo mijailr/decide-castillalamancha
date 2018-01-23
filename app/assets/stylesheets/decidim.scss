@@ -17,10 +17,13 @@ $secondary: #012169;
 
 @import "decidim/application";
 
+// Fonts
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Arial Narrow', Arial, sans-serif;
 }
+
+// Header white
 
 .title-bar {
   background: #fff;
@@ -34,10 +37,14 @@ h1, h2, h3, h4, h5, h6 {
   fill: #000;
 }
 
-
 @media only screen and (min-width: 596px) {
   .hero {
     background-size: contain;
   }
 }
-  
+
+// Participatory Process Banner
+
+.process-header__hashtag a {
+  color: #4d848f;
+}
