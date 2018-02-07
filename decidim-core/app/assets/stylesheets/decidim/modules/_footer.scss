@@ -26,8 +26,16 @@ $mini-footer-bg: $dark-gray;
 .main-footer__badge{
   display: block;
   width: 140px;
+  left: 5rem;
+  padding-top: .7rem;
+  @include breakpoint(small){
+    position: relative;
+  }
+  @include breakpoint(medium){
+    position:  relative;
+  }
   @include breakpoint(large){
-    position: absolute;
+    position:  absolute;
   }
 }
 
