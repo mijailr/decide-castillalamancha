@@ -12,7 +12,9 @@ module Decidim
       highlighted_stats = highlighted_stats.concat(feature_stats(priority: StatsRegistry::HIGH_PRIORITY))
       highlighted_stats = highlighted_stats.reject(&:empty?)
       highlighted_stats = highlighted_stats.reject { |_name, data| data.zero? }
-
+      meeting_attendees = Decidim::Meetings::Meeting.joins(scope: :organization).where(decidim_organizations: {id: organization}).sum(:attendees_count)
+      attendees = [[:users_count, meeting_attendees]]
+      highlighted_stats = (highlighted_stats + attendees).group_by(&:first).map { |k,v| [k, v.map(&:last).inject(:+)] }
       safe_join(
         highlighted_stats.in_groups_of(2, false).map do |stats|
           content_tag :div, class: "home-pam__highlight" do
