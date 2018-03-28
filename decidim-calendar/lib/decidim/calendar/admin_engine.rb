@@ -13,6 +13,8 @@ module Decidim
     class AdminEngine < ::Rails::Engine
       isolate_namespace Decidim::Calendar
 
+      paths["db/migrate"] = nil
+
       routes do
       end
     end
