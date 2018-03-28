@@ -24,13 +24,6 @@ module Decidim
         end
       end
 
-      initializer "decidim_news.migrations" do |app|
-          unless app.root.to_s.match(root.to_s)
-              config.paths["db/migrate"].expanded.each do |expand_path|
-                  app.config.paths['db/migrate'] << expand_path
-              end
-          end
-      end
       initializer "decidim_news.inject_abilities_to_user" do |_app|
         Decidim.configure do |config|
           config.abilities += [
