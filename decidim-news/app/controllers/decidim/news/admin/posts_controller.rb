@@ -80,7 +80,7 @@ module Decidim
       end
 
       def collection
-        current_organization.posts
+        Post.where(organization: current_organization)
       end
 
 

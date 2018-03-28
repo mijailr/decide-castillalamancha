@@ -22,7 +22,7 @@ module Decidim
       end
 
       def posts
-        @posts ||= current_organization.posts.page(params[:page]).per(9)
+        @posts ||= Post.where(organization: current_organization).page(params[:page]).per(9)
       end
     end
   end
