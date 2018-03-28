@@ -21,4 +21,10 @@ Decidim::HomeStatsPresenter.class_eval do
       end
     )
   end
+
+  def public_participatory_spaces
+     @public_participatory_spaces ||= Decidim.participatory_space_manifests.flat_map do |manifest|
+        manifest.participatory_spaces&.call(organization)&.public_spaces || []
+     end
+  end
 end
