@@ -11,6 +11,8 @@ module Decidim
     class AdminEngine < ::Rails::Engine
       isolate_namespace Decidim::News::Admin
 
+      paths["db/migrate"] = nil
+
       routes do
         resources :posts
       end
