@@ -1,5 +1,7 @@
 {
   "name": "decide-castillalamancha",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "d3-sankey": "^0.7.1"
+  }
 }
