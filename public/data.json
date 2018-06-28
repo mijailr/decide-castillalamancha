@@ -1,0 +1,302 @@
+{
+  "nodes": [
+    {"name": "Cuestiones Generales"},
+    {"name": "Gabinete Jurídico"},
+    {"name": "Instrumentos de participación"},
+    {"name": "Iniciativa Ciudadana"},
+    {"name": "Organización administrativa"},
+    {"name": "Ámbitos y órganos"},
+    {"name": "Observatorio Ciudadano"},
+    {"name": "Fomento de la participación"},
+    {"name": "Democracia Digital"},
+    {"name": "Gestión Público-Social y auto-gestión"},
+    {"name": "Régimen sancionador"},
+    {"name": "Disposiciones"},
+    {"name": "Consejo Consultivo"},
+    {"name": "Artículo-1"},
+    {"name": "Artículo-2"},
+    {"name": "MODIFICADO GJ"},
+    {"name": "RECHAZADO GJ"},
+    {"name": "Artículo-3"},
+    {"name": "Artículo-4"},
+    {"name": "Artículo-5"},
+    {"name": "Artículo-6"},
+    {"name": "Artículo-7"},
+    {"name": "Artículo-8"},
+    {"name": "Artículo-9"},
+    {"name": "Artículo-10"},
+    {"name": "Artículo-11"},
+    {"name": "Artículo-12"},
+    {"name": "Consejo de Gobierno"},
+    {"name": "MODIFICADO CC"},
+    {"name": "Artículo-13"},
+    {"name": "Artículo-14"},
+    {"name": "Artículo-15"},
+    {"name": "RECHAZADO CC"},
+    {"name": "Artículo-16"},
+    {"name": "Artículo-17"},
+    {"name": "Artículo-18"},
+    {"name": "Artículo-19"},
+    {"name": "Artículo-20"},
+    {"name": "Cortes"},
+    {"name": "RECHAZADO CG"},
+    {"name": "Artículo-21"},
+    {"name": "Artículo-22"},
+    {"name": "Artículo-23"},
+    {"name": "LEY"},
+    {"name": "RECHAZADO CO"},
+    {"name": "Artículo-24"}
+  ],
+  "links": [
+    {
+      "source": "Cuestiones Generales",
+      "target": "Gabinete Jurídico",
+      "value": "10"
+    },
+    {
+      "source": "Instrumentos de participación",
+      "target": "Gabinete Jurídico",
+      "value": "10"
+    },
+    {
+      "source": "Iniciativa Ciudadana",
+      "target": "Gabinete Jurídico",
+      "value": "10"
+    },
+    {
+      "source": "Organización administrativa",
+      "target": "Gabinete Jurídico",
+      "value": "10"
+    },
+    {
+      "source": "Ámbitos y órganos",
+      "target": "Gabinete Jurídico",
+      "value": "10"
+    },
+    {
+      "source": "Observatorio Ciudadano",
+      "target": "Gabinete Jurídico",
+      "value": "10"
+    },
+    {
+      "source": "Fomento de la participación",
+      "target": "Gabinete Jurídico",
+      "value": "5"
+    },
+    {
+      "source": "Democracia Digital",
+      "target": "Gabinete Jurídico",
+      "value": "5"
+    },
+    {
+      "source": "Gestión Público-Social y auto-gestión",
+      "target": "Gabinete Jurídico",
+      "value": "5"
+    },
+    {
+      "source": "Régimen sancionador",
+      "target": "Gabinete Jurídico",
+      "value": "3"
+    },
+    {
+      "source": "Disposiciones",
+      "target": "Gabinete Jurídico",
+      "value": "2"
+    },
+    {
+      "source": "Gabinete Jurídico",
+      "target": "Consejo Consultivo",
+      "value": "78"
+    },
+    {
+      "source": "Gabinete Jurídico",
+      "target": "Consejo Consultivo",
+      "value": "2"
+    },
+    {
+      "source": "MODIFICADO GJ",
+      "target": "Artículo-1",
+      "value": "1"
+    },
+    {
+      "source": "MODIFICADO GJ",
+      "target": "Artículo-2",
+      "value": "1"
+    },
+    {
+      "source": "Artículo-1",
+      "target": "Consejo Consultivo",
+      "value": "1"
+    },
+    {
+      "source": "Artículo-2",
+      "target": "Consejo Consultivo",
+      "value": "1"
+    },
+    {
+      "source": "Gabinete Jurídico",
+      "target": "RECHAZADO GJ",
+      "value": "10"
+    },
+    {
+      "source": "RECHAZADO GJ",
+      "target": "Artículo-3",
+      "value": "1"
+    },
+    {
+      "source": "RECHAZADO GJ",
+      "target": "Artículo-4",
+      "value": "1"
+    },
+    {
+      "source": "RECHAZADO GJ",
+      "target": "Artículo-5",
+      "value": "1"
+    },
+    {
+      "source": "RECHAZADO GJ",
+      "target": "Artículo-6",
+      "value": "1"
+    },
+    {
+      "source": "RECHAZADO GJ",
+      "target": "Artículo-7",
+      "value": "1"
+    },
+    {
+      "source": "RECHAZADO GJ",
+      "target": "Artículo-8",
+      "value": "1"
+    },
+    {
+      "source": "RECHAZADO GJ",
+      "target": "Artículo-9",
+      "value": "1"
+    },
+    {
+      "source": "RECHAZADO GJ",
+      "target": "Artículo-10",
+      "value": "1"
+    },
+    {
+      "source": "RECHAZADO GJ",
+      "target": "Artículo-11",
+      "value": "1"
+    },
+    {
+      "source": "RECHAZADO GJ",
+      "target": "Artículo-12",
+      "value": "1"
+    },
+    {
+      "source": "Consejo Consultivo",
+      "target": "Consejo de Gobierno",
+      "value": "67"
+    },
+    {
+      "source": "Consejo Consultivo",
+      "target": "MODIFICADO CC",
+      "value": "3"
+    },
+    {
+      "source": "MODIFICADO CC",
+      "target": "Artículo-13",
+      "value": "1"
+    },
+    {
+      "source": "MODIFICADO CC",
+      "target": "Artículo-14",
+      "value": "1"
+    },
+    {
+      "source": "MODIFICADO CC",
+      "target": "Artículo-15",
+      "value": "1"
+    },
+    {
+      "source": "Artículo-13",
+      "target": "Consejo de Gobierno",
+      "value": "1"
+    },
+    {
+      "source": "Artículo-14",
+      "target": "Consejo de Gobierno",
+      "value": "1"
+    },
+    {
+      "source": "Artículo-15",
+      "target": "Consejo de Gobierno",
+      "value": "1"
+    },
+    {
+      "source": "Consejo Consultivo",
+      "target": "RECHAZADO CC",
+      "value": "5"
+    },
+    {
+      "source": "RECHAZADO CC",
+      "target": "Artículo-16",
+      "value": "1"
+    },
+    {
+      "source": "RECHAZADO CC",
+      "target": "Artículo-17",
+      "value": "1"
+    },
+    {
+      "source": "RECHAZADO CC",
+      "target": "Artículo-18",
+      "value": "1"
+    },
+    {
+      "source": "RECHAZADO CC",
+      "target": "Artículo-19",
+      "value": "1"
+    },
+    {
+      "source": "RECHAZADO CC",
+      "target": "Artículo-20",
+      "value": "1"
+    },
+    {
+      "source": "Consejo de Gobierno",
+      "target": "Cortes",
+      "value": "72"
+    },
+    {
+      "source": "Consejo de Gobierno",
+      "target": "RECHAZADO CG",
+      "value": "3"
+    },
+    {
+      "source": "RECHAZADO CG",
+      "target": "Artículo-21",
+      "value": "1"
+    },
+    {
+      "source": "RECHAZADO CG",
+      "target": "Artículo-22",
+      "value": "1"
+    },
+    {
+      "source": "RECHAZADO CG",
+      "target": "Artículo-23",
+      "value": "1"
+    },
+    {
+      "source": "Cortes",
+      "target": "LEY",
+      "value": "71"
+    },
+    {
+      "source": "Cortes",
+      "target": "RECHAZADO CO",
+      "value": "1"
+    },
+    {
+      "source": "RECHAZADO CO",
+      "target": "Artículo-24",
+      "value": "1"
+    }
+  ]
+}
