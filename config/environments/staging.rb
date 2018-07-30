@@ -75,16 +75,17 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-  config.action_mailer.smtp_settings = {
-    :address        => Rails.application.secrets.smtp_address,
-    :port           => Rails.application.secrets.smtp_port,
-    :authentication => Rails.application.secrets.smtp_authentication,
-    :user_name      => Rails.application.secrets.smtp_username,
-    :password       => Rails.application.secrets.smtp_password,
-    :domain         => Rails.application.secrets.smtp_domain,
-    :ssl            => true,
-    :openssl_verify_mode => 'none'
-  }
+  config.action_mailer.delivery_method = :letter_opener_web
+  # config.action_mailer.smtp_settings = {
+  #   :address        => Rails.application.secrets.smtp_address,
+  #   :port           => Rails.application.secrets.smtp_port,
+  #   :authentication => Rails.application.secrets.smtp_authentication,
+  #   :user_name      => Rails.application.secrets.smtp_username,
+  #   :password       => Rails.application.secrets.smtp_password,
+  #   :domain         => Rails.application.secrets.smtp_domain,
+  #   :ssl            => true,
+  #   :openssl_verify_mode => 'none'
+  # }
 
   if Rails.application.secrets.sendgrid
     config.action_mailer.default_options = {
