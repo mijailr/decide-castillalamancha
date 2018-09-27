@@ -3,9 +3,9 @@
 source 'https://rubygems.org'
 
 ruby RUBY_VERSION
-DECIDIM_VERSION = '0.10.0'
+DECIDIM_VERSION = '0.14.1'
 gem 'decidim', DECIDIM_VERSION
-gem 'decidim-calendar', path: 'decidim-calendar'
+# gem 'decidim-calendar', path: 'decidim-calendar'
 gem 'decidim-news', path: 'decidim-news'
 
 gem 'airbrake', '~> 5.0'

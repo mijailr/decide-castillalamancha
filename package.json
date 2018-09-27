@@ -1,5 +1,6 @@
 {
   "name": "decide-castillalamancha",
+  "version": "0.14.1",
   "private": true,
   "dependencies": {
     "d3-sankey": "^0.7.1"

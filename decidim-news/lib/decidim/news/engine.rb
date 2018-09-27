@@ -24,13 +24,13 @@ module Decidim
         end
       end
 
-      initializer "decidim_news.inject_abilities_to_user" do |_app|
-        Decidim.configure do |config|
-          config.abilities += [
-            "Decidim::News::Abilities::EveryoneAbility",
-          ]
-        end
-      end
+      # initializer "decidim_news.inject_abilities_to_user" do |_app|
+      #   Decidim.configure do |config|
+      #     config.abilities += [
+      #       "Decidim::News::Abilities::EveryoneAbility",
+      #     ]
+      #   end
+      # end
     end
   end
 end

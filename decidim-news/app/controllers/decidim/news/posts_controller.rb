@@ -6,7 +6,7 @@ module Decidim
   module News
     class PostsController < Decidim::News::ApplicationController
       helper_method :posts, :post
-      authorize_resource :public_pages, class: false
+      # authorize_resource :public_pages, class: false
       def index
         @posts = posts
       end
