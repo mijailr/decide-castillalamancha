@@ -1,9 +1,0 @@
-<% if current_organization.banner? %>
-<div class="row">
-  <section class="banner">
-      <%= link_to current_organization.banner_link do
-        image_tag current_organization.banner
-      end %>
-  </section>
-</div>
-<% end %>
