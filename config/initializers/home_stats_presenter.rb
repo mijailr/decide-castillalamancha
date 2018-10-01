@@ -3,9 +3,10 @@ Decidim::HomeStatsPresenter.class_eval do
   def highlighted
     highlighted_stats = Decidim.stats.only([:users_count, :processes_count]).with_context(organization).map { |name, data| [name, data] }
     highlighted_stats = highlighted_stats.concat(global_stats(priority: Decidim::StatsRegistry::HIGH_PRIORITY))
-    highlighted_stats = highlighted_stats.concat(feature_stats(priority: Decidim::StatsRegistry::HIGH_PRIORITY))
+    highlighted_stats = highlighted_stats.concat(component_stats(priority: Decidim::StatsRegistry::HIGH_PRIORITY))
     highlighted_stats = highlighted_stats.reject(&:empty?)
     highlighted_stats = highlighted_stats.reject { |_name, data| data.zero? }
+
     meeting_attendees = Decidim::Meetings::Meeting.sum(:attendees_count)
     attendees = [[:users_count, meeting_attendees]]
     highlighted_stats = (highlighted_stats + attendees).group_by(&:first).map { |k,v| [k, v.map(&:last).inject(:+)] }
@@ -20,11 +21,5 @@ Decidim::HomeStatsPresenter.class_eval do
         end
       end
     )
-  end
-
-  def public_participatory_spaces
-     @public_participatory_spaces ||= Decidim.participatory_space_manifests.flat_map do |manifest|
-        manifest.participatory_spaces&.call(organization)&.public_spaces || []
-     end
   end
 end

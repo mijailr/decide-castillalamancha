@@ -23,18 +23,17 @@ module Decidim
                     Decidim::News::AdminEngine.routes.url_helpers.posts_path,
                     icon_name: "clipboard",
                     position: 5,
-                    active: :inclusive,
-                    if: can?(:manage, Decidim::News::Post)
+                    active: :inclusive
         end
       end
 
-      initializer "decidim_news.inject_abilities_to_user" do |_app|
-        Decidim.configure do |config|
-          config.admin_abilities += [
-            "Decidim::News::Abilities::AdminAbility",
-          ]
-        end
-      end
+      # initializer "decidim_news.inject_abilities_to_user" do |_app|
+      #   Decidim.configure do |config|
+      #     config.admin_abilities += [
+      #       "Decidim::News::Abilities::AdminAbility",
+      #     ]
+      #   end
+      # end
 
     end
   end
