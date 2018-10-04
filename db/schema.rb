@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_27_071197) do
+ActiveRecord::Schema.define(version: 2018_10_04_064751) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -566,6 +566,7 @@ ActiveRecord::Schema.define(version: 2018_09_27_071197) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "decidim_user_id"
+    t.datetime "published_at"
     t.index ["decidim_organization_id"], name: "index_decidim_news_posts_on_decidim_organization_id"
     t.index ["decidim_user_id"], name: "index_decidim_news_posts_on_decidim_user_id"
   end

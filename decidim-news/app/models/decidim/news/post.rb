@@ -4,17 +4,19 @@ module Decidim
   module News
     # News Post for organization
     class Post < ApplicationRecord
+      include Decidim::Participable
+      include Decidim::Publicable
       include Decidim::Resourceable
       include Decidim::Comments::Commentable
       before_create :create_slug
       has_many :comments, as: :decidim_commentable, class_name: "Decidim::Comments::Comment"
       belongs_to :organization,
-                  foreign_key: "decidim_organization_id",
-                  class_name: "Decidim::Organization",
-                  inverse_of: :posts
+                 foreign_key: "decidim_organization_id",
+                 class_name: "Decidim::Organization",
+                 inverse_of: :posts
       belongs_to :user,
-                  foreign_key: "decidim_user_id",
-                  class_name: "Decidim::User"
+                 foreign_key: "decidim_user_id",
+                 class_name: "Decidim::User"
       validates :slug, presence: true, uniqueness: { scope: :organization }
       validates :slug, format: { with: /\A[a-z0-9-]+/ }
       default_scope { order(created_at: :desc) }

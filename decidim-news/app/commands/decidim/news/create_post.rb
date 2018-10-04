@@ -33,7 +33,7 @@ module Decidim
           title: form.title,
           slug: form.slug,
           content: form.content,
-          organization: form.organization,
+          organization: current_organization,
           user: current_user
         )
       end
