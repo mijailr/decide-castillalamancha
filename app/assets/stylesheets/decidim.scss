@@ -36,12 +36,14 @@ h1, h2, h3, h4, h5, h6 {
 .topbar__notifications .icon, .topbar__conversations .icon {
   fill: #000;
 }
-
-@media only screen and (min-width: 596px) {
-  .hero {
-    background-size: contain;
-  }
+.hero{
+  background-size: contain !important;
 }
+// @media only screen and (min-width: 596px) {
+//   .hero {
+//     background-size: contain;
+//   }
+// }
 
 // Participatory Process Banner
 
